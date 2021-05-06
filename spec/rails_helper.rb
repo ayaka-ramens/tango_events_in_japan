@@ -64,4 +64,9 @@ RSpec.configure do |config|
 
   # FactoryBot使用時にクラス名省略ができるよう設定
   config.include FactoryBot::Syntax::Methods
+
+  # seedデータを作成
+  config.before(:suite) do
+    Rails.application.load_seed
+  end
 end
