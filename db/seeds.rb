@@ -63,6 +63,7 @@
     area:    p[2],
     en_area: p[3]
   )
+  puts "「#{p[0]}」登録完了"
 end
 
 [
@@ -81,5 +82,5 @@ end
     en_name: g[1],
     remote: g[2]
   )
-  puts "#{g[0]} 登録完了"
+  puts "「#{g[0]}」登録完了"
 end
