@@ -48,7 +48,8 @@ class EventsController < ApplicationController
       :prefecture_id,
       :address1,
       :address2,
-      :description
+      :description,
+      :genre_id
     )
   end
 end
