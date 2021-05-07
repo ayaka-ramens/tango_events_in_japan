@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_05_07_000943) do
 
   create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
+    t.string "en_name", null: false
     t.boolean "remote", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
