@@ -44,7 +44,17 @@ RSpec.describe "Events", type: :request do
 
   describe 'POST events' do
     before do
-      post '/events', params: { event: { name: '中級レッスン', date: Time.current } }
+      post '/events', params: {
+        event: {
+          name: '中級レッスン',
+          date: Time.current,
+          prefecture_id: 15,
+          address1: '中央区日本橋小舟町3452',
+          address2: '3452ビル 2階',
+          description: '中級クラスのグループレッスンです。テーマは「軸の使い方」です。',
+          genre_id: 1
+        }
+      }
     end
 
     it '200 OK が返ってくる' do
