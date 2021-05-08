@@ -8,7 +8,7 @@ class CreateOrganizers < ActiveRecord::Migration[6.0]
       t.string :address1
       t.string :address2
       t.string :hp_url
-      t.string :mail
+      t.string :email
 
       t.timestamps
     end

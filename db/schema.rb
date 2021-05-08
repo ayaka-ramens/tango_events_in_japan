@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_05_08_030816) do
     t.string "address1"
     t.string "address2"
     t.string "hp_url"
-    t.string "mail"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
