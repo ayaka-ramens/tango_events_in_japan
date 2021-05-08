@@ -5,4 +5,5 @@ class Prefecture < ApplicationRecord
   validates :en_area, presence: true
 
   has_many :events
+  has_many :organizers
 end
