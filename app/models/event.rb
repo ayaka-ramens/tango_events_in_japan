@@ -3,5 +3,5 @@ class Event < ApplicationRecord
   validates :date, presence: true
 
   belongs_to :prefecture
-  belongs_to :genre
+  belongs_to :genre, optional: true
 end
