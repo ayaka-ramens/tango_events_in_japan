@@ -63,4 +63,24 @@
     area:    p[2],
     en_area: p[3]
   )
+  puts "「#{p[0]}」登録完了"
+end
+
+[
+  ['ミロンガ', 'milonga', false],
+  ['レッスン', 'lesson', false],
+  ['プラクティカ', 'practice', false],
+  ['勉強会', 'study', false],
+  ['その他ローカル', 'other local', false],
+  ['ミロンガ', 'milonga', true],
+  ['レッスン', 'lesson', true],
+  ['勉強会', 'study', true],
+  ['その他リモート', 'other remote', true],
+].each do |g|
+  Genre.create!(
+    name: g[0],
+    en_name: g[1],
+    remote: g[2]
+  )
+  puts "「#{g[0]}」登録完了"
 end

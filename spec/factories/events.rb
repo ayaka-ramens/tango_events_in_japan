@@ -7,5 +7,6 @@ FactoryBot.define do
     address1 { '中央区日本橋小舟町3452' }
     address2 { '3452ビル 2階' }
     description { '中級クラスのグループレッスンです。テーマは「軸の使い方」です。' }
+    genre_id { 1 }
   end
 end
