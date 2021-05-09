@@ -7,6 +7,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.6'
 gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'foreman' # rails angularの起動を同時に行えるようにする
 
 group :development, :test do
   gem 'pry-byebug'
