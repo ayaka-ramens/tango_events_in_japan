@@ -8,12 +8,12 @@ jobs:
     env:
       RAILS_ENV: test
       DB_HOST: 127.0.0.1
-      DB_PORT: 3306
+      DB_PORT: 33060
     services:
       db:
         image: mysql:8.0.23
         ports:
-          - 3306:3306
+          - 33060:3306
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
