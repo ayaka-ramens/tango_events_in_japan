@@ -16,12 +16,10 @@ jobs:
         image: mysql:8.0.23
         ports:
           - 33060:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --default-authentication-plugin=mysql_native_password
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
-          MYSQL_ROOT_PASSWORD: ''
-          MYSQL_USER: 'user'
-          MYSQL_DATABASE: tango_events_in_japan_test
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          BIND-ADDRESS: 0.0.0.0
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby 2.6.6
