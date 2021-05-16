@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "Organizers", type: :request do
-  describe 'GET organizers' do
+RSpec.describe "Api::V1::Organizers", type: :request do
+  describe 'GET api/v1/organizers' do
     context 'オーガナイザーが存在するとき' do
       let!(:organizer1) { create(:organizer) }
       let!(:organizer2) { create(:organizer) }
 
       before do
-        get '/organizers'
+        get '/api/v1/organizers'
       end
 
       it '200 OK が返ってくる' do
@@ -22,12 +22,12 @@ RSpec.describe "Organizers", type: :request do
     end
   end
 
-  describe 'GET organizers/:id' do
+  describe 'GET api/v1/organizers/:id' do
     context 'オーガナイザーが存在するとき' do
       let(:organizer) { create(:organizer) }
 
       before do
-        get "/organizers/#{organizer.id}"
+        get "/api/v1/organizers/#{organizer.id}"
       end
 
       it '200 OK が返ってくる' do
@@ -42,9 +42,9 @@ RSpec.describe "Organizers", type: :request do
     end
   end
 
-  describe 'POST organizers' do
+  describe 'POST api/v1/organizers' do
     before do
-      post '/organizers',
+      post '/api/v1/organizers',
       params: {
         organizer: {
           name: 'オーガナイザー名',
@@ -71,11 +71,11 @@ RSpec.describe "Organizers", type: :request do
     end
   end
 
-  describe 'PUT organizers/:id' do
+  describe 'PUT api/v1/organizers/:id' do
     let(:organizer) { create(:organizer) }
 
     before do
-      put "/organizers/#{organizer.id}", params: { organizer: { name: 'オーガナイザー名更新' } }
+      put "/api/v1/organizers/#{organizer.id}", params: { organizer: { name: 'オーガナイザー名更新' } }
     end
 
     it '200 OK が返ってくる' do
@@ -89,11 +89,11 @@ RSpec.describe "Organizers", type: :request do
     end
   end
 
-  describe 'DELETE organizers/:id' do
+  describe 'DELETE api/v1/organizers/:id' do
     let(:organizer) { create(:organizer) }
 
     before do
-      delete "/organizers/#{organizer.id}"
+      delete "/api/v1/organizers/#{organizer.id}"
     end
 
     it '200 OK が返ってくる' do

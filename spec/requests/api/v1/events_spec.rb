@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "Events", type: :request do
-  describe 'GET events' do
+RSpec.describe "Api::V1::Events", type: :request do
+  describe 'GET api/v1/events' do
     context 'イベントが存在するとき' do
       let!(:event1) { create(:event) }
       let!(:event2) { create(:event) }
 
       before do
-        get '/events'
+        get '/api/v1/events'
       end
 
       it '200 OK が返ってくる' do
@@ -22,12 +22,12 @@ RSpec.describe "Events", type: :request do
     end
   end
 
-  describe 'GET events/:id' do
+  describe 'GET api/v1/events/:id' do
     context 'イベントが存在するとき' do
       let(:event) { create(:event) }
 
       before do
-        get "/events/#{event.id}"
+        get "/api/v1/events/#{event.id}"
       end
 
       it '200 OK が返ってくる' do
@@ -42,9 +42,9 @@ RSpec.describe "Events", type: :request do
     end
   end
 
-  describe 'POST events' do
+  describe 'POST api/v1/events' do
     before do
-      post '/events', params: {
+      post '/api/v1/events', params: {
         event: {
           name: '中級レッスン',
           date: Time.current,
@@ -68,11 +68,11 @@ RSpec.describe "Events", type: :request do
     end
   end
 
-  describe 'PUT events/:id' do
+  describe 'PUT api/v1/events/:id' do
     let(:event) { create(:event) }
 
     before do
-      put "/events/#{event.id}", params: { event: { name: 'イベント名更新' } }
+      put "/api/v1/events/#{event.id}", params: { event: { name: 'イベント名更新' } }
     end
 
     it '200 OK が返ってくる' do
@@ -86,11 +86,11 @@ RSpec.describe "Events", type: :request do
     end
   end
 
-  describe 'DELETE events/:id' do
+  describe 'DELETE api/v1/events/:id' do
     let(:event) { create(:event) }
 
     before do
-      delete "/events/#{event.id}"
+      delete "/api/v1/events/#{event.id}"
     end
 
     it '200 OK が返ってくる' do
