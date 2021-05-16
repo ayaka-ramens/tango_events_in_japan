@@ -9,6 +9,8 @@ jobs:
       RAILS_ENV: test
       DB_HOST: 127.0.0.1
       DB_PORT: 33060
+      DB_USERNAME: 'root'
+      DB_PASSWORD: ''
     services:
       db:
         image: mysql:8.0.23
