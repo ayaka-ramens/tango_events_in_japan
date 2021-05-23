@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventComponent } from './components/event/event.component';
-import { EventService } from './services/event.service';
+import { EventService } from './services/event/event.service';
 
 @NgModule({
   declarations: [

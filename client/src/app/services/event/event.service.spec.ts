@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { EventService } from './event.service';
-import { Event } from '../models/event';
+import { Event } from '../../models/event';
 import { HttpErrorResponse } from '@angular/common/http';
 
 describe('EventService', () => {
