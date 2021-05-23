@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventComponent } from './event.component';
+import { EventService } from '../../services/event/event.service';
+import { EventServiceStub } from '../../services/event/event.service.stub';
 
 describe('EventComponent', () => {
   let component: EventComponent;
@@ -8,7 +10,8 @@ describe('EventComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EventComponent ]
+      declarations: [ EventComponent ],
+      providers: [ { provide: EventService, useValue: new EventServiceStub() } ]
     })
     .compileComponents();
   });
@@ -19,7 +22,13 @@ describe('EventComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('ngOnInitを実行するとgetProductsが呼ばれモックした内容が返されること', () => {
+    spyOn(component, 'getEvents');
+    component.ngOnInit();
+    expect(component.getEvents).toHaveBeenCalled();
   });
 });
