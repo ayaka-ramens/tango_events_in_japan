@@ -14,12 +14,9 @@ export class EventService {
       'Content-Type': 'application/json'
     }),
   };
-  /*
-   * バックエンドはポート番号「3000」で待ち受けているため、そのまま指定すると CORS でエラーになる
-   * それを回避するため、ここではフロントエンドのポート番号「4200」を指定し、
-   * Angular CLI のリバースプロキシを利用してバックエンドとの通信を実現する
-   */
-  private host: string = 'http://localhost:4200';
+
+  // TODO: 環境ごとに切り替えるようにする
+  private host: string = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
