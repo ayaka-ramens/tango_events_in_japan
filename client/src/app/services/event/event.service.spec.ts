@@ -53,7 +53,7 @@ describe('EventService', () => {
           expect(events).toEqual(mockEvents);
         });
 
-      const req = httpTestingController.expectOne('http://localhost:4200/api/v1/events');
+      const req = httpTestingController.expectOne('http://localhost:3000/api/v1/events');
       expect(req.request.method).toEqual('GET');
       req.flush(mockEvents);
     })
@@ -73,7 +73,7 @@ describe('EventService', () => {
           err => expect(err).toEqual(mockErrorResponse)
         );
 
-      const req = httpTestingController.expectOne('http://localhost:4200/api/v1/events');
+      const req = httpTestingController.expectOne('http://localhost:3000/api/v1/events');
       expect(req.request.method).toEqual('GET');
 
       req.flush(mockErrorResponse)
