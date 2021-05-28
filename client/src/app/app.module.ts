@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { EventComponent } from './components/event/event.component';
 import { EventService } from './services/event/event.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { EventDetailComponent } from './components/event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
