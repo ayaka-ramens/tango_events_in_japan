@@ -27,6 +27,13 @@ export class EventService {
       );
   }
 
+  getEvent(id: number): Observable<Event> {
+    return this.http.get<Event>(this.host + `/api/v1/events/${id}`)
+      .pipe(
+        catchError(this.handleError<Event>('getEvent'))
+      );
+  }
+
   // 失敗したHttp操作を処理する
   private handleError<T>(operation='operation', result?:T) {
     return(error: any): Observable<T> => {
