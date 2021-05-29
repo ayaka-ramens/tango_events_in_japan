@@ -1,1 +1,27 @@
-<p>event-detail works!</p>
+<h3>イベント詳細</h3>
+
+<div *ngIf="event">
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>日時</td>
+      <td>{{event.date | date:"yyyy/MM/dd HH:mm"}}</td>
+    </tr>
+    <tr>
+      <td>イベント名</td>
+      <td>{{event.name}}</td>
+    </tr>
+    <tr>
+      <td>場所</td>
+      <!-- TODO都道府県変換する -->
+      <td>{{event.prefecture_id}}{{event.address1}}{{event.address2}}</td>
+    </tr>
+    <tr>
+      <td>説明</td>
+      <td>{{event.description}}</td>
+    </tr>
+  </table>
+</div>
