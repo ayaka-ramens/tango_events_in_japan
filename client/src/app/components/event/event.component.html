@@ -3,6 +3,8 @@
 <ul>
   <li *ngFor="let event of eventList">
     {{event.id}}
-    {{event.name}}
+    <a routerLink="/api/v1/events/{{event.id}}">
+      {{event.name}}
+    </a>
   </li>
 </ul>
