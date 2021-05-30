@@ -31,4 +31,10 @@ describe('EventDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('ngOnInitを実行するとgetEventが呼ばれモックした内容が返されること', () => {
+    spyOn(component, 'getEvent');
+    component.ngOnInit();
+    expect(component.getEvent).toHaveBeenCalled();
+  });
 });
