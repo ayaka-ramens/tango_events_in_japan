@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
+import { EventService } from 'src/app/services/event/event.service';
+import { EventServiceStub } from 'src/app/services/event/event.service.stub';
 import { EventDetailComponent } from './event-detail.component';
 
 describe('EventDetailComponent', () => {
@@ -8,7 +11,13 @@ describe('EventDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EventDetailComponent ]
+      declarations: [ EventDetailComponent ],
+      imports: [
+        RouterTestingModule.withRoutes(
+          [{ path: 'api/v1/events/:id', component: EventDetailComponent }]
+        )
+      ],
+      providers: [ { provide: EventService, useValue: new EventServiceStub() } ]
     })
     .compileComponents();
   });

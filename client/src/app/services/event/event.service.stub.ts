@@ -25,4 +25,17 @@ export class EventServiceStub {
       ]
     );
   }
+
+  getEvent(id: number) {
+    return of(
+      { id: 1,
+        name: '中級グループレッスン',
+        date: '2021-05-10T10:00:00.000Z',
+        prefecture_id: 15,
+        address1: '中央区日本橋小舟町3452',
+        address2: '3452ビル 2階',
+        description: '中級クラスのグループレッスンです。テーマは「軸の使い方」です。',
+        genre_id: 1 }
+    );
+  }
 }
