@@ -32,7 +32,7 @@ describe('EventComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('ngOnInitを実行するとgetProductsが呼ばれモックした内容が返されること', () => {
+  it('ngOnInitを実行するとgetEventsが呼ばれモックした内容が返されること', () => {
     spyOn(component, 'getEvents');
     component.ngOnInit();
     expect(component.getEvents).toHaveBeenCalled();
