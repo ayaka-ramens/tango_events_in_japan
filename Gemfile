@@ -9,6 +9,7 @@ gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 gem 'foreman' # rails angularの起動を同時に行えるようにする
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   gem 'pry-byebug'
