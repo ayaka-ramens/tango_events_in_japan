@@ -1,8 +1,8 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :date, :prefecture, :address1, :address2, :description,
+  attributes :id, :name, :date, :prefecture_id, :prefecture_name, :address1, :address2, :description,
     :genre, :created_at, :updated_at
 
-  def prefecture
+  def prefecture_name
     Prefecture.find(object.prefecture_id).name
   end
 
