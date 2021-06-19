@@ -7,5 +7,6 @@ export class Event {
   address1?: string | null;
   address2?: string | null;
   description?: string | null;
-  genre?: string | null;
+  genre_id?: number | null;
+  genre_name?: string | null;
 }
