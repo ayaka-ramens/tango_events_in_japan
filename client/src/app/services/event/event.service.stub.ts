@@ -13,7 +13,7 @@ export class EventServiceStub {
           address1: '中央区日本橋小舟町3452',
           address2: '3452ビル 2階',
           description: '中級クラスのグループレッスンです。テーマは「軸の使い方」です。',
-          genre_id: 1 },
+          genre: 'レッスン' },
         { id: 2,
           name: 'vamosミロンガ',
           date: '2021-07-20T10:00:00.000Z',
@@ -21,7 +21,7 @@ export class EventServiceStub {
           address1: '千代田区三番町1-5-5',
           address2: '三番町第2ビル4F',
           description: 'welcome!!',
-          genre_id: 1 }
+          genre: 'ミロンガ' }
       ]
     );
   }
@@ -35,7 +35,7 @@ export class EventServiceStub {
         address1: '中央区日本橋小舟町3452',
         address2: '3452ビル 2階',
         description: '中級クラスのグループレッスンです。テーマは「軸の使い方」です。',
-        genre_id: 1 }
+        genre: 'レッスン' }
     );
   }
 }
