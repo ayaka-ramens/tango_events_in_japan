@@ -30,7 +30,8 @@ describe('EventService', () => {
     it('イベントが全件返ってくること', () => {
       const mockEvents: Event[] =
       [
-        { id: 1,
+        {
+          id: 1,
           name: '中級グループレッスン',
           date: '2021-05-10T10:00:00.000Z',
           prefecture_id: 15,
@@ -39,8 +40,10 @@ describe('EventService', () => {
           address2: '3452ビル 2階',
           description: '中級クラスのグループレッスンです。テーマは「軸の使い方」です。',
           genre_id: 2,
-          genre_name: 'レッスン' },
-        { id: 2,
+          genre_name: 'レッスン'
+        },
+        {
+          id: 2,
           name: 'vamosミロンガ',
           date: '2021-07-20T10:00:00.000Z',
           prefecture_id: 15,
@@ -49,7 +52,8 @@ describe('EventService', () => {
           address2: '三番町第2ビル4F',
           description: 'welcome!!',
           genre_id: 1,
-          genre_name: 'ミロンガ' }
+          genre_name: 'ミロンガ'
+        }
       ];
 
       service.getEvents()
