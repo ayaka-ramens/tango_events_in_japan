@@ -9,19 +9,22 @@ import { EventComponent } from './components/event/event.component';
 import { EventService } from './services/event/event.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
+import { EventFormComponent } from './components/event-form/event-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventComponent,
     PageNotFoundComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    EventFormComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     HttpClientModule
+
   ],
   providers: [
     EventService
