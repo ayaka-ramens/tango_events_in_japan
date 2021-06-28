@@ -56,5 +56,4 @@ export const prefectures: Prefecture[] = [
     { id: 47, name: "宮崎", en_name: "miyazaki", area: "九州", en_area: "kyushu" },
     { id: 48, name: "鹿児島", en_name: "kagoshima", area: "九州", en_area: "kyushu" },
     { id: 49, name: "沖縄", en_name: "okinawa", area: "九州", en_area: "kyushu" }
-  ]
-
+]
