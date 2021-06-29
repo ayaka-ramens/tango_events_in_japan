@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 import { EventService } from 'src/app/services/event/event.service';
-import { Event } from '../../models/event';
 import { Genre, genres } from 'src/app/services/genre/genre';
 import { Prefecture, prefectures } from 'src/app/services/prefecture/prefecture';
 
