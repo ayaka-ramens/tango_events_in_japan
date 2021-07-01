@@ -27,6 +27,7 @@ export class EventFormComponent implements OnInit {
   })
 
   constructor(
+    private router: Router,
     private fb: FormBuilder,
     private eventService: EventService
   ) { }
@@ -49,6 +50,7 @@ export class EventFormComponent implements OnInit {
       .subscribe(event => {
         // TODO 通知する
         console.log(`created: ${this.eventForm.value.name}`);
+        this.router.navigate([`api/v1/events/${event.id}`]);
       })
   }
 }
