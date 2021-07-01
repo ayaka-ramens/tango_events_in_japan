@@ -11,8 +11,8 @@ export const genres: Genre[] = [
     { id: 3, name: "プラクティカ", en_name: "practice", remote: false},
     { id: 4, name: "勉強会", en_name: "study", remote: false},
     { id: 5, name: "その他ローカル", en_name: "other local", remote: false},
-    { id: 6, name: "ミロンガ", en_name: "milonga", remote: true},
-    { id: 7, name: "レッスン", en_name: "lesson", remote: true},
-    { id: 8, name: "勉強会", en_name: "study", remote: true},
-    { id: 9, name: "その他リモート", en_name: "other remote", remote: true}
-  ]
+    { id: 6, name: "オンラインミロンガ", en_name: "milonga", remote: true},
+    { id: 7, name: "オンラインレッスン", en_name: "lesson", remote: true},
+    { id: 8, name: "オンライン勉強会", en_name: "study", remote: true},
+    { id: 9, name: "オンラインその他", en_name: "other remote", remote: true}
+]

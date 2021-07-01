@@ -72,10 +72,10 @@ end
   ['プラクティカ', 'practice', false],
   ['勉強会', 'study', false],
   ['その他ローカル', 'other local', false],
-  ['ミロンガ', 'milonga', true],
-  ['レッスン', 'lesson', true],
-  ['勉強会', 'study', true],
-  ['その他リモート', 'other remote', true],
+  ['オンラインミロンガ', 'milonga', true],
+  ['オンラインレッスン', 'lesson', true],
+  ['オンライン勉強会', 'study', true],
+  ['オンラインその他', 'other remote', true],
 ].each do |g|
   Genre.create!(
     name: g[0],

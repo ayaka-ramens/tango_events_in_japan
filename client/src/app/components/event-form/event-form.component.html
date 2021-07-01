@@ -1,0 +1,38 @@
+<form [formGroup]="eventForm" (ngSubmit)="createEvent()">
+  <div>
+    <label for="name">イベント名</label>
+    <input type="text" name="name" formControlName="name" />
+  </div>
+  <div>
+    <label for="date">日時</label>
+    <input type="datetime-local" name="date" formControlName="date" />
+  </div>
+  <div>
+    <label for="prefecture_id">都道府県</label>
+    <select formControlName="prefecture_id">
+      <option *ngFor="let prefecture of prefectureData; let i=index" [ngValue]="prefecture.id">{{prefecture.name}}</option>
+    </select>
+  </div>
+  <div>
+    <label for="address1">市区町村</label>
+    <input type="text" name="address1" formControlName="address1" />
+  </div>
+  <div>
+    <label for="address2">番地・建物名・階数</label>
+    <input type="text" name="address2" formControlName="address2" />
+  </div>
+  <div>
+    <label for="description">説明</label>
+    <textarea cols="50" rows="5" name="description" formControlName="description"></textarea>
+  </div>
+  <div>
+    <label for="genre_id">ジャンル</label>
+    <select formControlName="genre_id">
+      <option *ngFor="let genre of genreData; let i=index" [ngValue]="genre.id">{{genre.name}}</option>
+    </select>
+  </div>
+  <div>
+    <input type="submit" value="登録" [disabled]="eventForm.invalid" />
+  </div>
+</form>
+
