@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { EventService } from 'src/app/services/event/event.service';
 import { Genre, genres } from 'src/app/services/genre';
@@ -44,11 +45,10 @@ export class EventFormComponent implements OnInit {
   }
 
   createEvent(): void {
-    console.log(this.eventForm.value)
-    // this.eventService.createEvent(event)
-    //   .subscribe(event => {
-    //     // TODO 通知する
-    //     console.log(`created: ${event.name}`);
-    //   })
+    this.eventService.createEvent(this.eventForm.value)
+      .subscribe(event => {
+        // TODO 通知する
+        console.log(`created: ${this.eventForm.value.name}`);
+      })
   }
 }
